@@ -42,3 +42,8 @@ out/
 *.tar.gz
 *.rar
 
+### Exclusions ###
+!gradle/wrapper/gradle-wrapper.jar
+!artifacts/aqa-shop.jar
+!**/src/main/**
+!**/src/test/**
