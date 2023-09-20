@@ -73,4 +73,24 @@ public class OrderCardPageTest {
         orderCardPage.waitNotificationWrongFormat();
         assertEquals("0", SQLHelper.getOrderCount());
     }
+
+    @Test
+    void buyNegativeCardNotInDatabase() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardNotInDatabase();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationFailure();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
+
+    @Test
+    void buyNegativeMonth1Symbol() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardMonth1Symbol();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationWrongFormat();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
 }
