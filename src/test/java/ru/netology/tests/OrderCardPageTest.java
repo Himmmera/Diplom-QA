@@ -113,4 +113,24 @@ public class OrderCardPageTest {
         orderCardPage.waitNotificationExpirationDateError();
         assertEquals("0", SQLHelper.getOrderCount());
     }
+
+    @Test
+    void creditNegativeMonth00OverThisYear() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardMonth00OverThisYear();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationExpirationDateError();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
+
+    @Test
+    void buyNegativeYear00() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardYear00();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationExpiredError();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
 }
