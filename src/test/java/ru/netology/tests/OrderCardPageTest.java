@@ -153,4 +153,24 @@ public class OrderCardPageTest {
         orderCardPage.waitNotificationExpiredError();
         assertEquals("0", SQLHelper.getOrderCount());
     }
+
+    @Test
+    void buyNegativeYearOverThisYearOn6() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardYearOverThisYearOn6();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationExpirationDateError();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
+
+    @Test
+    void buyNegativeCvv1Symbol() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardCvv1Symbol();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationWrongFormat();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
 }
