@@ -193,4 +193,24 @@ public class OrderCardPageTest {
         orderCardPage.waitNotificationWrongFormat();
         assertEquals("0", SQLHelper.getOrderCount());
     }
+
+     @Test
+    void buyNegativeOwnerNumeric() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardHolderNumeric();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationWrongFormat();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
+
+    @Test
+    void buyNegativeOwnerSpecialSymbols() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getCardSpecialSymbols();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationWrongFormat();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
 }
