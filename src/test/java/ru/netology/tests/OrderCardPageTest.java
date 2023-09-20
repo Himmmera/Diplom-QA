@@ -52,4 +52,25 @@ public class OrderCardPageTest {
         assertEquals("DECLINED", SQLHelper.getPaymentStatus());
 
     }
+
+     @Test
+    void buyNegativeAllFieldEmpty() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getEmptyCard();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationWrongFormat4Fields();
+        assertEquals("0", SQLHelper.getOrderCount());
+
+    }
+
+    @Test
+    void buyNegativeNumberCard15Symbols() {
+        startPage.orderCardPage();
+        var cardInfo = DataHelper.getNumberCard15Symbols();
+        var orderCardPage = new OrderCardPage();
+        orderCardPage.insertCardData(cardInfo);
+        orderCardPage.waitNotificationWrongFormat();
+        assertEquals("0", SQLHelper.getOrderCount());
+    }
 }
