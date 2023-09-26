@@ -8,10 +8,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class DataHelper {
-    private String generateDate(int addDays, int addMonths, int addYears, String pattern) {
-        return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
-    }
-
     public static CardInfo getApprovedCard() {
         return new CardInfo("4444444444444441", getShiftedMonth(2), getShiftedYear(0), "Irina Kim", "888");
     }
