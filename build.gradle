@@ -29,12 +29,9 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'io.rest-assured:rest-assured:5.3.1'
     testImplementation 'com.google.code.gson:gson:2.8.6'
-    testCompileOnly 'org.projectlombok:lombok:1.18.26'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
     testImplementation 'mysql:mysql-connector-java:8.0.33'
     testImplementation 'org.postgresql:postgresql:42.5.1'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
-    testImplementation 'io.qameta.allure:allure-selenide:2.23.0'
 }
 
 test {
