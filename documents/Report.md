@@ -24,13 +24,13 @@
 ![Gradle5](https://github.com/Himmmera/Diplom-QA/assets/120020624/041dc3fa-36c7-421b-aa8c-7a60cb3276f1)
 
 ### Отчет по результатам тестирования Allure:
-![Al1](https://github.com/Himmmera/Diplom-QA/assets/120020624/c33716cc-86fe-4e5c-a8b3-f079add2e6bb)
+![A1](https://github.com/Himmmera/Diplom-QA/assets/120020624/f58699a8-2312-4740-9d58-633b8401ef0c)
 
-![Al2](https://github.com/Himmmera/Diplom-QA/assets/120020624/8cc93df5-7fe6-4945-82cb-9e5271ecc413)
+![A2](https://github.com/Himmmera/Diplom-QA/assets/120020624/34b46334-0b2b-47c1-9a13-d819c2b5cec7)
 
-![Al3](https://github.com/Himmmera/Diplom-QA/assets/120020624/e41f5cb6-b454-4772-8fcf-7f0434100c87)
+![A3](https://github.com/Himmmera/Diplom-QA/assets/120020624/48b31977-f82d-453f-b848-54d9cff8096c)
 
-![Al4](https://github.com/Himmmera/Diplom-QA/assets/120020624/a41eb1d5-389f-45f2-934b-3187b07511d9)
+![A4](https://github.com/Himmmera/Diplom-QA/assets/120020624/791c71b3-b933-4d98-abea-a08ffcbe714a)
 
 ### Общие рекомендации
 * Исправить найденные ошибки
