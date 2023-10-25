@@ -13,9 +13,9 @@ public class SQLHelper {
 
     @SneakyThrows
     public static void clearDB() {
-        var cleanCreditRequest = "DELETE FROM credit_request_entity;";
-        var cleanOrder = "DELETE FROM order_entity;";
-        var cleanPayment = "DELETE FROM payment_entity;";
+        var cleanCreditRequest = "DELETE FROM credit_request_entity";
+        var cleanOrder = "DELETE FROM order_entity";
+        var cleanPayment = "DELETE FROM payment_entity";
         var runner = new QueryRunner();
         var conn = DriverManager.getConnection(url, user, password);
         runner.update(conn, cleanCreditRequest);
