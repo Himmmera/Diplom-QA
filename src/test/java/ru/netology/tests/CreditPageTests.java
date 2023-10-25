@@ -7,6 +7,7 @@ import ru.netology.data.SQLHelper;
 import ru.netology.pages.StartPage;
 import ru.netology.pages.CreditPage;
 import com.codeborne.selenide.logevents.SelenideLogger;
+
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -55,7 +56,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat4Fields();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -65,7 +66,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -75,7 +76,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationFailure();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -85,7 +86,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -95,7 +96,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationExpirationDateError();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -105,7 +106,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationExpirationDateError();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -115,7 +116,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationExpirationDateError();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -125,7 +126,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationExpiredError();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -135,7 +136,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -145,7 +146,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationExpiredError();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -155,7 +156,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationExpirationDateError();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -165,7 +166,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -175,7 +176,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -185,7 +186,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -195,7 +196,7 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 
     @Test
@@ -205,6 +206,6 @@ public class CreditPageTests {
         var creditPage = new CreditPage();
         creditPage.insertCardData(cardInfo);
         creditPage.waitNotificationWrongFormat();
-        assertEquals(null, SQLHelper.getOrderCount());
+        assertEquals("0", SQLHelper.getOrderCount());
     }
 }
